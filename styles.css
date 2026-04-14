@@ -1,25 +1,20 @@
-/* Estilos globales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     background-color: #E9EEF5;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow-x: hidden; /* Evita el scroll horizontal en el body */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
-
 main{
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* Navegación principal (nav1) */
-.nav1 {
+.nav1[class] {
     display: flex;
     flex-direction: row;
     width: min(1100px, 92vw);
@@ -27,74 +22,69 @@ main{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 20px;
+    align-items: center;
+    /* Centra verticalmente los elementos */
+padding: 20px;
     background-color: #FFFFFF;
     border-radius: 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
-.logo {
+.logo[class] {
     padding: 10px;
     height: 140px;
     width: auto;
     border-radius: 100%;
-    box-shadow: 0px 4px 10px rgba(17, 15, 27, 0.46);
+        box-shadow: 0px 4px 10px rgba(17, 15, 27, 0.46);
+
 }
 
-.titulo {
+.titulo [class]{
     font-weight: bold;
     font-size: 30px;
     color:#1B4965 ;
 }
 
-/* Navegación secundaria (nav2mi) */
-.nav2mi {
+.nav2mi [class]{
     background-color: #ffffff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     width: 100vw; /* Obliga a la barra a medir lo mismo que la pantalla */
-    margin: 20px calc(50% - 50vw); /* Ajuste para centrar y ocupar todo el ancho */
+    margin: 20px calc(50% - 50vw); /*20 es el espacio que la barra deja arriba y abajo.50%: "Muévete hacia el centro de tu caja actual".
+50vw: "Ahora, estírate hacia la izquierda hasta la mitad de la pantalla total".*/
     border-radius: 0;
 }
 
-.nav-link {
+.nav-link [class]{
     color: #1B4965 ;
 }
-
-/* Contenedor de la tabla */
-.contenedor{
-    background: white;
+.contenedor [class]{
+        background: white;
     padding: 20px;
     margin:20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     max-width: 100%;
-    overflow-x: auto; /* Permite el scroll horizontal solo dentro de este contenedor */
-}
 
-/* Estilos de la tabla */
-table{
-    width: 100%; /* Asegura que la tabla ocupe el 100% del contenedor */
-    background: white;
-    border-collapse: collapse; /* Colapsa los bordes de la tabla */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    white-space: nowrap; /* Evita que el texto de las celdas se rompa, forzando el scroll si es necesario */
 }
+    table{
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-th{
-    background: #3b7994;
-    color: white;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ddd; /* Añadir bordes para consistencia */
-    text-align: left; /* Alinear texto a la izquierda */
-}
+    th{
+        background: #3b7994;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+    }
 
-td{
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    font-size: 13px;
-    border: 1px solid #ddd; /* Añadir bordes para consistencia */
-}
+    td{
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 13px;
+    }
+
