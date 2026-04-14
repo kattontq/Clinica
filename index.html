@@ -11,37 +11,40 @@
 <body>
   <!--creo que me faltaron id´s lol asi q pillen a ver como le hacen-->
     <main>
-  <nav class="nav1">
-  <div class="titulo">
-      <img src="logo.png" alt="logo" class="logo">
-      Clínica San Rafael
+<nav>
+  <div class="nav1">
+    <div class="titulo">
+      <img src="img/logo2.png" alt="Logo" class="img">
+      <h1>Clinica San Rafael</h1>
+    </div>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="pacienteform/formulariPaciente.html">
+          Agregar Paciente
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Registrar Diagnóstico</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Actualizar Información</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Eliminar Paciente</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Estadísticas</a>
+      </li>
+    </ul>
   </div>
 </nav>
-<div>
-<ul class="nav justify-content-center nav2mi">
-  <li class="nav-item">
-    <a class="nav-link" id="agregar-paciente" href="pacienteform/formulariPaciente.html" title="Agregar datos de un nuevo paciente">Agregar Paciente</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="registrar-diagnostico" href="#" title="Registrar diagnóstico de un paciente">Registrar Diagnóstico</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="actualizar-informacion" href="#" title="Actualizar información de un paciente">Actualizar Información</a>
-  </li>
-    <li class="nav-item">
-    <a class="nav-link" id="eliminar-paciente" href="#" title="Eliminar un paciente">Eliminar Paciente</a>
-  </li>
-      <li class="nav-item">
-    <a class="nav-link" id="ver-estadisticas" href="#" title="Ver estadísticas de la clínica">Estadísticas</a>
-  </li>
-</ul>
-</div>
 <div class="contenedor">
-  <table>
-    <thead>
+  <div class="table-responsive">
+  <table class="table table-success table-striped-columns">
+    <thead class="th-color">
         <tr>
             <!-- PACIENTE -->
-            <th>ID Paciente</th>
+            <th class="th1">ID Paciente</th>
             <th>Documento</th>
             <th>Nombres</th>
             <th>Apellidos</th>
@@ -64,7 +67,7 @@
             <!-- HOSPITALIZACION -->
             <th>Fecha Ingreso</th>
             <th>Estado Hospitalización</th>
-            <th>Fecha Salida</th>
+            <th class="th2">Fecha Salida</th>
         </tr>
     </thead>
 
@@ -72,6 +75,7 @@
         <!-- Aquí el backend mete los datos dinámicamente -->
       </tbody>
   </table>
+</div>
 </div>
 </main>
 </body>
