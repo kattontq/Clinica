@@ -31,6 +31,8 @@ h1{
 
 }
 .nav1{
+width: 100%;
+max-width: 1500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,7 +57,8 @@ h1{
 }
 
 
-.contenedor[class]{
+.contenedor{
+
         background: white;
     padding: 20px;
     margin:20px;
@@ -90,3 +93,12 @@ h1{
         border-bottom: 1px solid #ddd;
         font-size: 13px;
     }
+    @media (max-width: 768px) {
+  .grupo-campo2 {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

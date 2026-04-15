@@ -15,20 +15,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const fechaFinField = document.getElementById('fechaFinField');
   const fechaFin = document.getElementById('fechaFin');
 
-  // 🔓 Abrir modal
+  // Abrir modal
   op1.addEventListener('change', () => {
     modalOverlay.classList.add('active');
   });
 
-  // 🔒 Cerrar si selecciona "No"
+  // Cerrar si selecciona "No"
   op2.addEventListener('change', cerrarModal);
 
-  // ❌ Botón X (si no existe, evita error)
+  // Botón X (si no existe, evita error)
   if (closeBtn) {
     closeBtn.addEventListener('click', cerrarModal);
   }
 
-  // ❌ Botón cancelar
+  // Botón cancelar
   if (cancelBtn) {
     cancelBtn.addEventListener('click', cerrarModal);
   }
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       console.log('Datos del tratamiento:', datos);
 
-      alert('Tratamiento guardado ✅');
+      alert('Tratamiento guardado exitosamente');
 
       setTimeout(cerrarModal, 500);
     });
