@@ -1,57 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-    margin: 0;
-    color: #1B4965;
-    background-color: #E9EEF5;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  margin: 0;
+  background-color: #E9EEF5 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
+
 main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
+
 /* Título */
 .titulo {
   margin: 25px;
   text-align: center;
+  color:#104261;
 }
 
-#formulario-paciente{
-background-color: rgb(255, 255, 255);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 20px;
-border-radius: 20px;
-margin: 30px;
-margin-left: 200px;
-margin-right: 200px;
-box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+#formulario-paciente {
+  max-width: 1200px;
+  width: 55%;
+  /*El width intenta ser 60%, pero si ese 60% pasa de 1200px, se queda en 1200px*/
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  margin-bottom: 75px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
 }
-input[type="text"], 
+
+input[type="text"],
 input[type="number"],
 input[type="date"],
 select {
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom:7px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%; /* Hace que el campo ocupe todo el ancho del contenedor */
-   color:#1B4965 ;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  /* Hace que el campo ocupe todo el ancho del contenedor */
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-label{
-  margin:10px;
+input:focus {
+  outline: none;
+  background-color: #bfcff03b;
+  border: 1px solid #6b6b7f;
 }
+label {
+  margin: 5px;
+  font-weight: 400;
+  color: #153a52;
+}
+.option1{
+  color: #000000;
+}
+.button2, .button {
+  transition: all 0.3s ease;
+}
+
+.button2:hover, .button:hover {
+  background-color: #163b52;
+  transform: translateY(-2px);
+}
+
 .grupo-campo {
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 30px;
@@ -59,12 +86,13 @@ label{
   padding: 32px;
   padding-bottom: 28px;
   padding-top: 28px;
-  border: 1px solid #eee;
+  border: 1px solid #e1e1e1;
   border-radius: 6px;
   width: 80%;
 }
 
 .grupo-campo2 {
+  max-width: 1200px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +102,8 @@ label{
   padding: 0 32px 24px;
 }
 
-.grupo-campo2 > label:first-child {
+.grupo-campo2>label:first-child {
+  /* Aplica estilos al primer label dentro de grupo-campo2 */
   width: 100%;
   margin: 0 0 6px;
   text-align: left;
@@ -85,7 +114,7 @@ label{
   margin: 0;
 }
 
-.grupo-campo2 input[type="radio"] + label {
+.grupo-campo2 input[type="radio"]+label {
   margin: 0 12px 0 4px;
 }
 
@@ -97,64 +126,112 @@ label{
   background-color: #1B4965;
   color: #fff;
   cursor: pointer;
-  font: inherit; /* Hereda la fuente del elemento padre */
+  font: inherit;
+  /* Hereda la fuente del elemento padre */
 }
 
-/*modal overlay */
+option {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  /* Hace que el campo ocupe todo el ancho del contenedor */
+  color: #1B4965;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.modal-overlay.active {/* muestra el modal cuando tiene la clase "active" */
+  display: flex;
+}
 .modal-overlay {
+  display: none;/* Oculta el modal por defecto */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none; /* Oculto por defecto */
-  justify-content: center;
-  align-items: center;
 }
-
-.modal{
+.grupo-campo1{
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
-  margin: 50px;   
-    padding: 30px;
-    border: 1px solid #eee;
-    border-radius: 5px;
+  margin: 30px;
+  margin-top: 20px;
+  padding: 32px;
+  padding-bottom: 28px;
+  padding-top: 28px;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  width: 80%;
 }
 
-/* 🔓 Cuando está activo */
-.modal-overlay.active {
+.tratamientoform {
+  max-width: 1200px;
+  width: 30%;
+  /*El width intenta ser 60%, pero si ese 60% pasa de 1200px, se queda en 1200px*/
+  height: 95%;
+  background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: #fdfeff;
-  border-radius: 10px;
+  justify-content: center;
+  border-radius: 20px;
+  margin: 100px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  main {
-    padding: 12px;
-  }
+.h2titulo {
+  margin-top: 25px;
+  text-align: center;
+color:#104261;
+}
+.checkboxtratamiento {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  width: 100%;
+  min-height: 24px;
+}
 
-  #formulario-paciente {
-    margin: 16px auto;
-    padding: 16px;
-  }
+.checkboxtratamiento label {
+  margin: 0;
+  line-height: 1.2;
+}
 
-  .grupo-campo,
-  .grupo-campo2 {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+.checkboxtratamiento input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex: 0 0 18px;
+  accent-color: #1B4965;
+}
 
-  .grupo-campo2 {
-    justify-content: flex-start;
-  }
+#fechaFinField {
+  width: 100%;
+}
 
-  .grupo-campo2 button {
+.button1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     width: 100%;
-    margin-left: 0;
-    margin-top: 8px;
   }
-}
 
+.button2 {
+  margin-left: 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1B4965;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  /* Hereda la fuente del elemento padre */
+}
