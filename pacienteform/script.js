@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tratamientoForm) tratamientoForm.reset();
 
     // mostrar fecha fin
-    if (fechaFinField) fechaFinField.style.display = 'block';
+    if (fechaFinField) fechaFinField.style.display = 'flex';
+    if (fechaFin) fechaFin.removeAttribute('required');
+    if (document.getElementById('fechaFinFieldLabel')) document.getElementById('fechaFinFieldLabel').style.display = 'flex';
     if (fechaFin) fechaFin.removeAttribute('required');
 
     // evitar que se reabra solo
@@ -61,9 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (tratamientoEnCurso.checked) {
         fechaFinField.style.display = 'none';
         fechaFin.removeAttribute('required');
+        if (document.getElementById('fechaFinFieldLabel')) document.getElementById('fechaFinFieldLabel').style.display = 'none';
       } else {
-        fechaFinField.style.display = 'block';
+        fechaFinField.style.display = 'flex';
         fechaFin.setAttribute('required', 'required');
+        if (document.getElementById('fechaFinFieldLabel')) document.getElementById('fechaFinFieldLabel').style.display = 'flex';
+
       }
     });
   }
