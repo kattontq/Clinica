@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +18,15 @@
             <section class="grupo-campo">
                 <div>
                     <label for="documento">Documento:</label>
-                    <input type="text" id="documento" name="documento" required>
+                    <input type="text" id="documento" name="documento" required placeholder="Número de documento">
                 </div>
                 <div>
                     <label for="nombres">Nombres:</label>
-                    <input type="text" id="nombres" name="nombres" required>
+                    <input type="text" id="nombres" name="nombres" required placeholder="Nombre">
                 </div>
                 <div>
                     <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos" required>
+                    <input type="text" id="apellidos" name="apellidos" required placeholder="Apellidos">
                 </div>
                 <div>
                     <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
@@ -43,19 +43,21 @@
                 </div>
                 <div>
                     <label for="ciudad">Ciudad:</label>
-                    <input type="text" id="ciudad" name="ciudad" required>
+                    <input type="text" id="ciudad" name="ciudad" required placeholder="Ciudad de residencia">
                 </div>
                 <div>
                     <label for="eps">EPS:</label>
-                    <input type="text" id="eps" name="eps" required>
+                    <input type="text" id="eps" name="eps" required placeholder="Nombre de la EPS">
                 </div>
             </section>
             <section class="grupo-campo2">
-                <label>El usuario tiene algún tipo de tratamiento:</label><br>
+                <label>El usuario tiene algún tipo de tratamiento:</label>
+                <div class="radioaaaa">
                 <input type="radio" id="op1" name="opcion" value="1">
                 <label for="op1">Sí</label>
                 <input type="radio" id="op2" name="opcion" value="2">
                 <label for="op2">No</label>
+                </div>
                 <button type="submit" class="button">Guardar Paciente</button>
             </section>
         </form>

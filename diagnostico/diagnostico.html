@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ess">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <h1>Registrar Diagnóstico</h1>
+    <main>
+        <div class="contenedor">
+        <button class="button" id="btn-diagnostico">+ Nuevo Diagnóstico</button>
+        <div id="modal" class="modal">
+  <div class="modal-content">
+    <h3>Nuevo diagnóstico</h3>
+    <label for="Nombrepaciente">Nombre del paciente:</label>
+    <input type="text" id="Nombrepaciente" placeholder="Nombre del paciente" />
+    <label for="Fechadiagnostico">Fecha:</label>
+    <input type="date" id="Fechadiagnostico" />
+    <label for="diagnostico">Diagnóstico:</label>
+    <textarea id="diagnostico" placeholder="Escribe el diagnóstico..." rows="6"></textarea> <!--rows es para el tamaño del textarea-->
+                    <label>¿El usuario ha estado hospitalizado?</label><br>
+                <input type="radio" id="op1" name="opcion" value="1">
+                <label for="op1">Sí</label>
+                <input type="radio" id="op2" name="opcion" value="2">
+                <label for="op2">No</label>
+                <div class="modal2">
+                                        <label>Estado de hospitalización</label>
+                    <select id="estadoTratamiento" required>
+                        <option value="">Selecciona</option>
+                        <option class="option1">No hospitalizado</option>
+                        <option class="option1">Hospitalizado actualmente</option>
+                        <option class="option1">Hospitalizado previamente</option>
+                        <option class="option1">En observación</option>
+                        <option class="option1">Atención ambulatoria</option>
+                        <option class="option1">Egresado / dado de alta</option>
+                        <option class="option1">Reingreso hospitalario</option>
+                    </select>
+                    <label for="fechaingresohospi">Fecha de ingreso:</label>
+                    <input type="date" id="fechaingresohospi" />
+                    <label for="fechasalidahospi">Fecha de salida:</label>
+                    <input type="date" id="fechasalidahospi" />
+                    <div class="checkboxhospitalizacion">
+                    <label for="hospitalizacioncontinua">¿El paciente continua hospitalizado?</label>
+                    <input type="checkbox" id="hospitalizacioncontinua" name="hospitalizacioncontinua">
+                    </div>
+
+                </div>
+    <button onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+        </div>
+    </main>
+</body>
+</html>
