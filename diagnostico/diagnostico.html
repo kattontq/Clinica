@@ -3,62 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registrar Diagnóstico</title>
     <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script> <!--defer para que el script se ejecute después de cargar el HTML -->
-    <title>Registrar Diagnóstico</title>    
+    <script src="script.js" defer></script>
 </head>
 <body>
     <main>
         <h1>Registrar Diagnóstico</h1>
         <div class="contenedor">
-        <button class="button" id="btn-diagnostico">+ Nuevo Diagnóstico</button>
-        <div id="modal" class="modal">
-            <div class="modal-content">
-    <h2>Nuevo diagnóstico</h2>
-    <section class="grupo-campo">
-    <label for="Nombrepaciente">Nombre del paciente:</label>
-    <input type="text" id="Nombrepaciente" placeholder="Nombre del paciente" />
-    <label for="Fechadiagnostico">Fecha:</label>
-    <input type="date" id="Fechadiagnostico" />
-    <label for="diagnostico">Diagnóstico:</label>
-    <textarea id="diagnostico" placeholder="Escribe el diagnóstico..." rows="6"></textarea> <!--rows es para el tamaño del textarea-->
+            <button class="button" id="btn-diagnostico">+ Nuevo Diagnóstico</button>
+            <div class="eliminardiag">
+            <button onclick="irPagina()" class="button" id="btn-eliminardiagnostico">- Eliminar Diagnóstico</button>
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <h2>Nuevo diagnóstico</h2>
+
+                    <section class="grupo-campo">
+                        <label for="Nombrepaciente">Nombre del paciente:</label>
+                        <input type="text" id="Nombrepaciente" placeholder="Nombre del paciente" />
+
+                        <label for="Fechadiagnostico">Fecha:</label>
+                        <input type="date" id="Fechadiagnostico" />
+
+                        <label for="diagnostico">Diagnóstico:</label>
+                        <textarea id="diagnostico" placeholder="Escribe el diagnóstico..." rows="6"></textarea>
                     </section>
+
                     <div class="grupo-2">
-    <label>¿El usuario ha estado hospitalizado?</label>
-                <input type="radio" id="opcion1" name="opcion" value="1">
-                <label for="opcion1">Sí</label>
-                <input type="radio" id="opcion2" name="opcion" value="2">
-                <label for="opcion2">No</label>
-            </div>
-                            <button type="submit" class="button2">Guardar Diagnóstico</button>
-            </div>
-                <div class="modal2">
-                    <div class="modal-content2">
-                                        <label>Estado de hospitalización</label>
-                    <select id="estadoTratamiento" required>
-                        <option value="">Selecciona</option>
-                        <option class="option1">No hospitalizado</option>
-                        <option class="option1">Hospitalizado actualmente</option>
-                        <option class="option1">Hospitalizado previamente</option>
-                        <option class="option1">En observación</option>
-                        <option class="option1">Atención ambulatoria</option>
-                        <option class="option1">Egresado / dado de alta</option>
-                        <option class="option1">Reingreso hospitalario</option>
-                    </select>
-                    <label for="fechaingresohospi">Fecha de ingreso:</label>
-                    <input type="date" id="fechaingresohospi" />
-                    <label for="fechasalidahospi">Fecha de salida:</label>
-                    <input type="date" id="fechasalidahospi" />
-                    <div class="checkboxhospitalizacion">
-                    <label for="hospitalizacioncontinua">¿El paciente continua hospitalizado?</label>
-                    <input type="checkbox" id="hospitalizacioncontinua" name="hospitalizacioncontinua">
+                        <label>El usuario ha estado hospitalizado?</label>
+                        <input type="radio" id="opcion1" name="opcion" value="1">
+                        <label for="opcion1">Si</label>
+                        <input type="radio" id="opcion2" name="opcion" value="2">
+                        <label for="opcion2">No</label>
                     </div>
-<button id="btn-cerrar">Cerrar</button>
-                </div>
+
+                    <button type="submit" class="button2">Guardar Diagnóstico</button>
                 </div>
 
-</div>
+                <div class="modal2">
+                    <div class="modal-content2">
+                        <h2>Hospitalización</h2>
+                        <section class="grupo-campo">
+                            <label for="estadoTratamiento">Estado de hospitalización</label>
+                            <select id="estadoTratamiento" required>
+                                <option value="">Selecciona</option>
+                                <option class="option1">No hospitalizado</option>
+                                <option class="option1">Hospitalizado actualmente</option>
+                                <option class="option1">Hospitalizado previamente</option>
+                                <option class="option1">En observacion</option>
+                                <option class="option1">Atencion ambulatoria</option>
+                                <option class="option1">Egresado / dado de alta</option>
+                                <option class="option1">Reingreso hospitalario</option>
+                            </select>
+
+                            <label for="fechaingresohospi">Fecha de ingreso:</label>
+                            <input type="date" id="fechaingresohospi" />
+
+                            <div id="grupo-fecha-salida">
+                                <label for="fechasalidahospi">Fecha de salida:</label>
+                                <input type="date" id="fechasalidahospi" />
+                            </div>
+
+                            <div class="checkboxhospitalizacion">
+                                <label for="hospitalizacioncontinua">El paciente continua hospitalizado?</label>
+                                <input type="checkbox" id="hospitalizacioncontinua" name="hospitalizacioncontinua">
+                            </div>
+                        </section>
+
+                        <button id="btn-cerrar" class="btn-cerrar">Cerrar</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

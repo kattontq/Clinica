@@ -1,5 +1,7 @@
+      function irPagina() {
+    window.location.href = "/diagnostico/eliminarpac/index.html";
+  }
 document.addEventListener("DOMContentLoaded", () => {
-
     const modal = document.getElementById("modal");
     const btnAbrir = document.getElementById("btn-diagnostico");
     const btnCerrar = document.getElementById("btn-cerrar");
@@ -10,42 +12,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const checkContinua = document.getElementById("hospitalizacioncontinua");
     const fechaSalida = document.getElementById("fechasalidahospi");
+    const grupoFechaSalida = document.getElementById("grupo-fecha-salida");
 
-    // 🔥 ABRIR
     btnAbrir.addEventListener("click", () => {
         modal.classList.add("active");
     });
 
-    // 🔥 CERRAR
     btnCerrar.addEventListener("click", () => {
-        modal.classList.remove("active");
+        modal2.classList.remove("active");
     });
 
-    // 🔹 Mostrar hospitalización
     radioSi.addEventListener("change", () => {
-        modal2.style.display = "block";
+        modal2.classList.add("active");
     });
 
-    // 🔹 Ocultar hospitalización
     radioNo.addEventListener("change", () => {
-        modal2.style.display = "none";
+        modal2.classList.remove("active");
     });
 
-    // 🔹 Checkbox
     checkContinua.addEventListener("change", () => {
         if (checkContinua.checked) {
             fechaSalida.disabled = true;
             fechaSalida.value = "";
+            grupoFechaSalida.style.display = "none";
         } else {
             fechaSalida.disabled = false;
+            grupoFechaSalida.style.display = "block";
         }
     });
 
-    // 🔹 Cerrar haciendo click fuera
     window.addEventListener("click", (e) => {
+        if (e.target === modal2) {
+            modal2.classList.remove("active");
+        }
+
         if (e.target === modal) {
             modal.classList.remove("active");
         }
     });
-
 });
